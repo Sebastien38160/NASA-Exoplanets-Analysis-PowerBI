@@ -22,6 +22,12 @@ Ce projet Power BI propose une immersion analytique dans le catalogue des mondes
 ## 🧠 Intelligence Analytique & DAX
 Pour ce projet, j'ai développé des mesures spécifiques afin de traduire des données astronomiques complexes en indicateurs compréhensibles.
 
+### 📊 Mesures DAX utilisées
+* **Distance Moyenne (AL) :** `Distance Moyenne = AVERAGE('Exoplanètes'[distance])`
+* **Masse Moyenne :** `Masse Moyenne = AVERAGE('Exoplanètes'[Masse rapport planète])`
+* **Excentricité Orbitale :** `Excentricité Moyenne = AVERAGE('Exoplanètes'[Excentricité])`
+* **Décompte des Planètes :** `Nombre de Planètes = COUNT('Exoplanètes'[Nom])`
+
 ### 1. Classification par Type de Planète
 Cette mesure segmente les planètes en fonction de leur rayon par rapport à celui de la Terre ($R_\oplus$).
 ```dax
@@ -48,18 +54,6 @@ VAR AnneePrecedente = CALCULATE(COUNT('Exoplanets'[pl_name]), PREVIOUSYEAR('Cale
 RETURN
 DIVIDE(COUNT('Exoplanets'[pl_name]) - AnneePrecedente, AnneePrecedente, 0)
 
-📂 Structure des Données
-Le modèle de données repose sur les paramètres astrophysiques officiels :
-
-pl_name : Nom unique de l'exoplanète.
-
-discoverymethod : Technique de détection utilisée.
-
-pl_rade : Rayon terrestre (unité de comparaison).
-
-sy_dist : Distance du système par rapport à la Terre (parsecs).
-
-disc_year : Année de confirmation de la découverte.
 
 🛠️ Méthodologie & Visualisation
 ETL (Power Query) : Nettoyage des coordonnées célestes et gestion des valeurs manquantes sur les masses planétaires.
