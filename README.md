@@ -14,7 +14,8 @@ Ce projet Power BI propose une immersion analytique dans le catalogue des mondes
 ---
 
 ## 🖼️ Aperçu du Rapport
-![Tableau de Bord Exoplanètes](./Capture_Exoplanetes_NASA.png)
+![Tableau de Bord Exoplanètes](
+)
 > *Note : Ce dashboard interactif synthétise les données de plus de 4 700 mondes découverts à ce jour.*
 
 ---
